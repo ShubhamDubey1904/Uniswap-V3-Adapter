@@ -1,0 +1,15 @@
+export const ADDR = {
+  // Tokens
+  USDC:  "0xaf88d065e77c8cC2239327C5EDb3A432268e5831", // USDC.e (6 decimals)
+  WETH:  "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+
+  // Uniswap v3 core/periphery on Arbitrum One
+  POSITION_MANAGER: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
+  SWAP_ROUTER02:    "0xE592427A0AEce92De3Edee1F18E0157C05861564",
+  QUOTER_V2:        "0x61fFE014bA17989E743c5F6cB21bF9697530B21e",
+
+  // Fee tiers
+  FEE_500: 500,      // 0.05%
+  FEE_3000: 3000,    // 0.3%
+  FEE_10000: 10000,  // 1%
+};
