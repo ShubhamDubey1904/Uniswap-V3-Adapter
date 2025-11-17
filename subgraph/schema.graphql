@@ -1,0 +1,7 @@
+type Pair @entity {
+  id: ID!                                # e.g., "WETH-USDC" (uppercased symbol order)
+  fee: Int!                              # store fee tier we aggregate on (e.g., 500)
+  totalLiquidityAdded: BigInt!
+  totalLiquidityRemoved: BigInt!
+  totalSwappedUSDC: BigInt!              # how much USDC moved in swaps
+}
