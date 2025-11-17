@@ -1,0 +1,293 @@
+/* src/App.css */
+
+/* Global layout */
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #050608;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+/* App container */
+.app-root {
+  min-height: 100vh;
+  padding: 24px 24px 64px;
+  background: radial-gradient(circle at top, #181b24 0, #050608 55%);
+  color: #f5f7ff;
+}
+
+/* Header */
+.app-header {
+  max-width: 1100px;
+  margin: 0 auto 24px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid #262b37;
+  padding-bottom: 16px;
+}
+
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brand-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7028e4, #e5b2ca);
+  color: #050608;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.app-title {
+  margin: 4px 0 0 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.app-subtitle {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: #9ca4c3;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Wallet chip */
+.wallet-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #10131c;
+  border: 1px solid #2a3040;
+  font-size: 13px;
+}
+
+.wallet-chip .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #35d39a;
+  box-shadow: 0 0 8px rgba(53, 211, 154, 0.9);
+}
+
+.wallet-label {
+  color: #8da1ff;
+}
+
+.wallet-address {
+  font-family: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  border: none;
+  outline: none;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 160ms ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #7f5dff, #ff7ac3);
+  color: #050608;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.6);
+}
+
+.btn-secondary {
+  background: #151827;
+  color: #e0e4ff;
+  border: 1px solid #343a4f;
+}
+
+.btn-secondary:hover {
+  background: #1b2136;
+}
+
+/* Layout grid */
+.section-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .section-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section-grid > :last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Cards */
+.section-card {
+  background: radial-gradient(circle at top left, #171923, #070a11);
+  border-radius: 14px;
+  border: 1px solid #262b37;
+  padding: 18px 20px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+.section-title {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.section-help {
+  margin: 0 0 14px 0;
+  font-size: 12px;
+  color: #9ca4c3;
+}
+
+/* Form fields */
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.field-label {
+  flex: 0 0 130px;
+  font-size: 13px;
+  color: #c5cbe7;
+}
+
+.field-input {
+  flex: 1;
+  min-width: 120px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid #31364a;
+  background: #090d18;
+  color: #f5f7ff;
+  font-size: 13px;
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: #7f5dff;
+  box-shadow: 0 0 0 1px rgba(127, 93, 255, 0.7);
+}
+
+.field-suffix {
+  font-size: 13px;
+  color: #b0b6ce;
+}
+
+.button-row {
+  margin-top: 12px;
+}
+
+/* Pills / stats */
+.quote-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(48, 209, 88, 0.10);
+  color: #aef7d4;
+  margin-top: 4px;
+}
+
+.quote-pill span {
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.stat-pill {
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #0c101c;
+  border: 1px solid #282f42;
+}
+
+.stat-label {
+  display: block;
+  font-size: 11px;
+  color: #8a93b0;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 13px;
+  font-family: "SF Mono", ui-monospace, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+/* Utility text */
+.muted {
+  font-size: 12px;
+  color: #8a93b0;
+}
+
+.error {
+  font-size: 13px;
+  color: #ff6b81;
+}
+
+.tx-hash {
+  margin-top: 8px;
+  font-size: 11px;
+  color: #b8c1ff;
+  word-break: break-all;
+}
+
+.tx-hash a {
+  color: #9aa8ff;
+  text-decoration: none;
+}
+
+.tx-hash a:hover {
+  text-decoration: underline;
+}
